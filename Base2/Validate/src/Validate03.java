@@ -1,25 +1,25 @@
 import java.util.Scanner;
 
 public class Validate03{
-    public static int getInt(){
+    public static int getInt(String message, String error){
         Scanner inp=new Scanner(System.in);
         while(true){
             try{
-                System.out.println("Input: ");
-                String input=inp.nextLine();
+                System.out.print(message);
+                String input=inp.nextLine().trim();
                 int num=Integer.parseInt(input);
                 return num;
             } catch(Exception e){
-                System.out.println("Input must be decimal number!");
+                System.out.println(error);
             }
         }
     }
-    
+  
     public static void main(String[] args){
-        int num=getInt();
-        System.out.println(num);
+        int num=getInt("Input number: ", "Wrong");
+        System.out.println("Number: " + num);
         
-        int age=getInt();
-        System.out.println(age);
+        int age=getInt("Input age: ", "Wrong");
+        System.out.println("Age: " + age);
     }
 }

@@ -1,12 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author pta911
- */
-public class demoTryFinally {
-    
+public class demoTryFinally{
+    public static void main(String[] args){
+        try{
+            int data=5/0;
+        } finally{
+            System.out.println("Khối lệnh finally luôn được");
+        }
+        System.out.println("Finished!");
+    }
 }

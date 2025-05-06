@@ -16,6 +16,7 @@ class NumberPairs{
     }
     
     public void printNum(){
+        System.out.println("SWAP");
         System.out.println("a=" + a + ", b=" + b);
     }
 }
@@ -23,8 +24,11 @@ class NumberPairs{
 public class PassByValue{
     public static void main(String[] args){
         Scanner inp=new Scanner(System.in);
+        System.out.print("a=");
         int a=inp.nextInt();
+        System.out.print("b=");
         int b=inp.nextInt();
+        
         
         NumberPairs num=new NumberPairs(a, b);
         num.swap(a, b);
